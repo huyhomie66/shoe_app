@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sneakerapp/utils/colors.dart';
+import 'package:sneakerapp/theme/colors.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({Key? key, required this.title}) : super(key: key);

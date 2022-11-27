@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, sort_child_properties_last, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:sneakerapp/utils/assets.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:sneakerapp/theme/assets.dart';
+import 'package:sneakerapp/theme/screen_size.dart';
 import 'package:sneakerapp/widgets/button.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,15 +19,17 @@ class _HomePageState extends State<HomePage> {
   void onNext() {}
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+        child: Scaffold(
       body: Column(
         children: <Widget>[
           Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
+              // SvgPicture.asset(SvgAssets.onboard),
               Image.asset(
-                'assets/images/onboard-shoes.png',
-                height: 200,
+                PngAssets.onboard,
+                fit: BoxFit.fill,
+                width: ScreenSize.width,
               ),
               Text(
                 'Start Journey With Nike',
@@ -57,6 +61,6 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-    );
+    ));
   }
 }
