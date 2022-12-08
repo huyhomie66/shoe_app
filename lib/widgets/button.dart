@@ -19,8 +19,7 @@ class PrimaryButton extends StatelessWidget {
               RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50.0),
           )),
-          backgroundColor:
-              const MaterialStatePropertyAll<Color>(CustomColors.primary),
+          backgroundColor:MaterialStateProperty.all(CustomColors.primary)
         ),
         child: Text(
           title,

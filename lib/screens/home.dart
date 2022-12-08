@@ -7,6 +7,7 @@ import 'package:sneakerapp/theme/assets.dart';
 import 'package:sneakerapp/theme/colors.dart';
 import 'package:sneakerapp/theme/screen_size.dart';
 import 'package:sneakerapp/widgets/button.dart';
+import 'package:sneakerapp/widgets/dots_indicator.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -106,7 +107,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               Image.asset(
                 PngAssets.onboardHeaderBg,
                 fit: BoxFit.fitWidth,
-                height: 120.h,
+                height: 140.h,
               ),
             ],
           ),
@@ -181,6 +182,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ),
           Row(
             children: [
+              DotsIndicator(dotsCount: 3),
               PrimaryButton(
                 onPressed: onNext,
                 title: 'Get Started',
