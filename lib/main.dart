@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sneakerapp/screens/home.dart';
+import 'package:sneakerapp/screens/onboard.dart';
 import 'package:sneakerapp/screens/products.dart';
 
 void main() {
@@ -15,9 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const HomePage(
+        '/home': (context) => const Onboard(
               title: 'test',
             ),
+        '/': (context) => const Home(),
         '/products': (context) => const ProductsPage(
               title: 'test',
             )
