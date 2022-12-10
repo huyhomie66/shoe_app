@@ -1,16 +1,24 @@
 # sneakerapp
 
-A new Flutter project.
+    e-commerce app
 
-## Getting Started
+# simple structure
 
-This project is a starting point for a Flutter application.
+    lib:
+        screens: screen storage
+        providers: providers logic
+        theme: customize theme
+        services: call api services
+        utils: logic handlers
+        widgets: ui widgets
 
-A few resources to get you started if this is your first Flutter project:
+# tools:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    vs code
+    xcode
+    android studio
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# how to run
+
+    note : with mac os and ios open xcode workspace in xcode and fill account information
+    run : run debug with vs code choose dart and flutter config
