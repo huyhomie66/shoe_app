@@ -1,8 +1,10 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:sneakerapp/data/home_data.dart';
 import 'package:sneakerapp/theme/colors.dart';
 import 'package:sneakerapp/theme/screen_size.dart';
+import 'package:sneakerapp/widgets/carousel.dart';
 
 class Home extends StatefulWidget {
   const Home({
@@ -19,13 +21,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
     setState(() => _bottomNavIndex = index);
   }
 
-  final iconList = <IconData>[
-    Iconsax.home,
-    Iconsax.heart,
-    Iconsax.notification,
-    Iconsax.setting,
-  ];
-
   @override
   Widget build(BuildContext context) {
     var floatButton = FloatingActionButton(
@@ -38,32 +33,21 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: false,
         shadowColor: Colors.transparent,
-        leading: Padding(
-          padding: const EdgeInsets.only(bottom: 10, left: 16),
-          child: Ink(
-            decoration: const ShapeDecoration(
-              color: Colors.white,
-              shape: CircleBorder(),
-            ),
-            child: IconButton(
-              color: Colors.black,
-              icon: const Icon(Iconsax.menu),
-              onPressed: () {},
-            ),
-          ),
-        ),
         actions: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(bottom: 10, right: 16),
+            padding: const EdgeInsets.only(bottom: 10, right: 10),
             child: Ink(
               decoration: const ShapeDecoration(
-                color: Colors.white,
+                color: CustomColors.primaryTint,
                 shape: CircleBorder(),
               ),
               child: IconButton(
-                color: Colors.black,
-                icon: const Icon(Iconsax.shopping_bag),
+                color: CustomColors.primary,
+                icon: const Icon(
+                  Iconsax.shopping_cart,
+                ),
                 onPressed: () {},
               ),
             ),
@@ -71,12 +55,14 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         ],
         backgroundColor: CustomColors.bgColor,
         title: const Text(
-          'shop',
-          style: TextStyle(color: Colors.black),
+          'Welcome to you',
+          style: TextStyle(color: Colors.black, fontSize: 20),
         ),
       ),
 
-      body: Container(), //destination screen
+      body: Container(
+        child: Column(children: [CarouselWidget()]),
+      ), //destination screen
       floatingActionButton: floatButton,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       backgroundColor: CustomColors.bgColor,
@@ -84,7 +70,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         icons: iconList,
         inactiveColor: Colors.blueGrey,
         activeColor: Colors.blue,
-        iconSize: 28,
+        iconSize: 32,
         activeIndex: _bottomNavIndex,
         splashRadius: 20,
         borderWidth: 3,

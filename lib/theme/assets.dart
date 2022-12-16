@@ -9,6 +9,8 @@ class PngAssets {
 
   static const String dotBg = '$_path/dot-bg.png';
   static const String shadow = '$_path/shadow.png';
+  static const String airPresto = '$_path/air-presto.png';
+  static const String airMaxBig = '$_path/air-max-200.png';
 }
 
 class SvgAssets {
