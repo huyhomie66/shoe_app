@@ -9,26 +9,20 @@ class PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 54,
-      width: 165,
-      child: TextButton(
-        onPressed: onPressed,
-        style: ButtonStyle(
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(50.0),
-          )),
-          backgroundColor:MaterialStateProperty.all(CustomColors.primary)
-        ),
-        child: Text(
-          title,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
+    final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        shadowColor: CustomColors.primaryTint,
+        elevation: 8.0,
+        backgroundColor: CustomColors.primaryTint);
+
+    return ElevatedButton(
+      onPressed: () {},
+      style: buttonStyle,
+      child: const Text(
+        'Shop now',
+        style: TextStyle(
+            color: CustomColors.titleColor, fontWeight: FontWeight.w800),
       ),
     );
   }

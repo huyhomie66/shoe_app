@@ -3,7 +3,6 @@ library dots_indicator;
 import 'dart:math';
 import 'dart:ui';
 
-
 import 'package:flutter/material.dart';
 import 'package:sneakerapp/widgets/dots_decorator.dart';
 

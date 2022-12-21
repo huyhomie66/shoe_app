@@ -4,10 +4,10 @@ import 'package:iconsax/iconsax.dart';
 final List<String> imageList = [];
 
 final iconList = <IconData>[
-  Iconsax.home,
-  Iconsax.heart,
-  Iconsax.notification,
-  Iconsax.setting,
+  Iconsax.home5,
+  Iconsax.heart5,
+  Iconsax.notification5,
+  Iconsax.setting5,
 ];
 
 final List<String> images = [
