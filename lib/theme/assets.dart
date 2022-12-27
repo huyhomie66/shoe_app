@@ -11,6 +11,9 @@ class PngAssets {
   static const String shadow = '$_path/shadow.png';
   static const String airPresto = '$_path/air-presto.png';
   static const String airMaxBig = '$_path/air-max-200.png';
+  static const String rebook = '$_path/nike-rebook.png';
+  static const String airMaxSport = '$_path/air-max-sport.png';
+  static const String airMax = '$_path/nike-air-max.png';
 }
 
 class SvgAssets {
